@@ -44,70 +44,108 @@ architecture Behavioral of registerfile_tb is
            src1 : in STD_LOGIC;
            src2 : in STD_LOGIC;
            clk  : in std_logic;
-           dataIn : in std_logic_vector (15 downto 0));   
-end component; 
+           dataIn : in std_logic_vector (15 downto 0);
+           out0, out1, out2, out3, out4, out5, out6, out7: out std_logic_vector (15 downto 0));            
+     end component; 
 
 signal s, des0, des1, des2, src0, src1, src2, clk: std_logic;
 signal dataIn : std_logic_vector (15 downto 0);
+signal r0, r1, r2, r3, r4, r5, r6, r7 : std_logic_vector (15 downto 0);
 constant clock_period: time := 10 ns;
 signal stop_the_clock: boolean;
 
 begin
-regF : registerfile port map (s, des0, des1, des2, src0, src1, src2, clk, dataIn);
+regF : registerfile port map (s, des0, des1, des2, src0, src1, src2, clk, dataIn, r0, r1, r2, r3, r4, r5, r6, r7);
 
 stim_proc: process
    begin		
       s <= '0';
-      des0 <= '0';
-      des1 <= '0';
-      des2 <= '0';
       src0 <= '0';
       src1 <= '0';
       src2 <= '0';
-      dataIn <= "0000000000000011";
+      des0 <= '0';
+      des1 <= '0';
+      des2 <= '0';
+      dataIn <= "0000000000000000";
       
-      wait for 10 ns;	
-      dataIn <= "0000000000001100";
+      wait for 20 ns;	
+      dataIn <= "0000000000000001";
       des0 <= '1';
       des1 <= '0';
       des2 <= '0';
       
-      wait for 10 ns;	
-	  dataIn <= "0000000000110000";
+      wait for 20 ns;	
+	  dataIn <= "0000000000000010";
 	  des0 <= '0';
       des1 <= '1';
       des2 <= '0';
 
-      wait for 10 ns;	
-	  dataIn <= "0000000011000000";
+      wait for 20 ns;	
+	  dataIn <= "0000000000000011";
 	  des0 <= '1';
       des1 <= '1';
       des2 <= '0';
 
-      wait for 10 ns;	
-	  dataIn <= "0000001100000000";
+      wait for 20 ns;	
+	  dataIn <= "0000000000000100";
       des0 <= '0';
       des1 <= '0';
       des2 <= '1';
       
-      wait for 10 ns;	
-	  dataIn <= "0000110000000000";
+      wait for 20 ns;	
+	  dataIn <= "0000000000000101";
       des0 <= '1';
       des1 <= '0';
       des2 <= '1';
       
-      wait for 10 ns;	
-	  dataIn <= "0011000000000000";
+      wait for 20 ns;	
+	  dataIn <= "0000000000000110";
       des0 <= '0';
       des1 <= '1';
       des2 <= '1';
       
-      wait for 10 ns;	
-      dataIn <= "1100000000000000";
+      wait for 20 ns;	
+      dataIn <= "0000000000000111";
       des0 <= '1';
       des1 <= '1';
       des2 <= '1';
+      
+      wait for 20ns;
+      s <='1';
+      src0 <= '0';
+      src1 <= '0';
+      src2 <= '0';
+      des0 <= '1';
+      des1 <= '1';
+      des2 <= '1';
+      
+      wait for 20ns;
+      src0 <= '1';
+      src1 <= '0';
+      src2 <= '0';
+      des0 <= '0';
+      des1 <= '1';
+      des2 <= '1';
+      
+      wait for 20ns;
+      src0 <= '0';
+      src1 <= '1';
+      src2 <= '0';
+      des0 <= '1';
+      des1 <= '0';
+      des2 <= '1';
+      
+      wait for 20ns;
+      src0 <= '1';
+      src1 <= '1';
+      src2 <= '0';
+      des0 <= '0';
+      des1 <= '0';
+      des2 <= '1';
+      
+     wait;
      
+      -- wait for 10 ns;
  --     wait;
    end process;
    

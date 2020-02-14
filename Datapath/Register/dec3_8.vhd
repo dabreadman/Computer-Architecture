@@ -41,12 +41,12 @@ architecture Behavioral of dec3_8 is
 
 begin
 z <=
-"00000001" after 5ns when des ="000" else
-"00000010" after 5ns when des ="001" else
-"00000100" after 5ns when des ="010" else
-"00001000" after 5ns when des ="011" else
-"00010000" after 5ns when des ="100" else
-"00100000" after 5ns when des ="101" else
-"01000000" after 5ns when des ="110" else
-"10000000" after 5ns when des ="111";
+"00000001" after 10ns when des ="000" else
+"00000010" after 10ns when des ="001" else
+"00000100" after 10ns when des ="010" else
+"00001000" after 10ns when des ="011" else
+"00010000" after 10ns when des ="100" else
+"00100000" after 10ns when des ="101" else
+"01000000" after 10ns when des ="110" else
+"10000000" after 10ns when des ="111" ;
 end Behavioral;
