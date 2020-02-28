@@ -36,8 +36,32 @@ entity ripperAdder16_tb is
 end ripperAdder16_tb;
 
 architecture Behavioral of ripperAdder16_tb is
-
+    component ripperAdder16 
+         Port (A, B : in std_logic_vector (15 downto 0);
+               cin: in std_logic;
+               q: out std_logic_vector(15 downto 0);
+               cout: out std_logic
+             );
+       end component;
+       
+signal A,B,q : std_logic_vector (15 downto 0);
+signal cin,cout : std_logic;   
+ 
 begin
+ripperAdder : ripperAdder16 port map (A,B,cin,q,cout);
 
-
+    proc : process
+    begin
+         A <= x"00ff";
+         B <= x"0002";
+         cin<='0';
+    
+    wait for 10ns;
+         cin<='1';
+         
+    wait for 10ns;
+        A <=x"ffff";
+    wait;
+        
+    end process;
 end Behavioral;

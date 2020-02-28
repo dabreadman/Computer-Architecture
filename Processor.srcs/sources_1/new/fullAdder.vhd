@@ -39,6 +39,6 @@ end fullAdder;
 architecture Behavioral of fullAdder is
 
 begin
-sum <= x xor y xor cin after 5ns;
-cout <= (x and y) or (x and cin) or (y and cin) after 5ns;
+sum <= x xor y xor cin;
+cout <= (x and y) or (x and cin) or (y and cin);
 end Behavioral;

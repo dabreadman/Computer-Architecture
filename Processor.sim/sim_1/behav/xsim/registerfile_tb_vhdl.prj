@@ -1,0 +1,11 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"C:/Users/tany3/Downloads/registerfile/registerfile/components/dec3_8.vhd" \
+"C:/Users/tany3/Downloads/registerfile/registerfile/components/mux2.vhd" \
+"C:/Users/tany3/Downloads/registerfile/registerfile/components/mux8.vhd" \
+"C:/Users/tany3/Downloads/registerfile/registerfile/components/reg16.vhd" \
+"C:/Users/tany3/Downloads/registerfile/registerfile/components/registerfile.vhd" \
+"C:/Users/tany3/Downloads/registerfile/registerfile/tb/registerfile_tb.vhd" \
+
+# Do not sort compile order
+nosort
