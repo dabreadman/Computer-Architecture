@@ -2,3 +2,6 @@ Running: xsim.dir/bLogicSlice_tb_behav/xsimk.exe -simmode gui -wdb bLogicSlice_t
 Design successfully loaded
 Design Loading Memory Usage: 5388 KB (Peak: 5388 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 5952 KB (Peak: 5952 KB)
+Simulation CPU Usage: 15 ms

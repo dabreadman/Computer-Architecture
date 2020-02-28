@@ -1,6 +1,6 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto b828d674e103454d8ee2086e587419ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot bLogicSlice_tb_behav xil_defaultlib.bLogicSlice_tb -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto b828d674e103454d8ee2086e587419ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot bLogic16_tb_behav xil_defaultlib.bLogic16_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -11,5 +11,6 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling architecture behavioral of entity xil_defaultlib.bLogicSlice [blogicslice_default]
-Compiling architecture behavioral of entity xil_defaultlib.blogicslice_tb
-Built simulation snapshot bLogicSlice_tb_behav
+Compiling architecture behavioral of entity xil_defaultlib.bLogic16 [blogic16_default]
+Compiling architecture behavioral of entity xil_defaultlib.blogic16_tb
+Built simulation snapshot bLogic16_tb_behav

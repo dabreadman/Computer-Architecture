@@ -1,4 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "U:/Y2/Computer-Architecture/Processor.srcs/sources_1/new/bLogicSlice.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'bLogicSlice'
-INFO: [VRFC 10-163] Analyzing VHDL file "U:/Y2/Computer-Architecture/Processor.srcs/sim_1/new/bLogicSlice_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'bLogicSlice_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "U:/Y2/Computer-Architecture/Processor.srcs/sim_1/new/bLogic16_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bLogic16_tb'
